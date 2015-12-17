@@ -1,0 +1,74 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,300,900,700,600,500,200);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,700italic,300,300italic,600,600italic);
+@import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|PT+Sans+Narrow:400,700|PT+Sans+Caption:400,700|Fira+Sans:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,300,100,700,500|PT+Serif:400,400italic,700,700italic|PT+Serif+Caption:400,400italic|PT+Mono|PT+Sans:400,400italic,700,700italic|Roboto:400,300,500,700,900|Fira+Mono:400,700);
+
+
+$serif: "Source Serif Pro", serif;
+$sans: "Source Sans Pro", sans-serif;
+$mono: "Source Code Pro", monospace;
+
+
+body {
+  font-family: $serif;
+  line-height: 1.5em;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.subheading {
+  font-family: $sans;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: justify;
+  font-size: .9em;
+  line-height: 1.5em;
+
+  width: 35rem;
+  margin: 0 auto;
+}
+
+section {
+  counter-increment: section;
+
+  h1 {
+    font-family: $mono;
+    font-size: 2em;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    border: 5px solid black;
+    padding: 10px;
+    width: 35rem;
+    margin: 4rem auto 2rem;
+
+    position: relative;
+
+    &::before {
+      content: "Section " counter(section, upper-roman);
+      font-size: .5em;
+      font-weight: 300;
+
+      position: absolute;
+      top: -1em;
+      left: 2rem;
+
+      background: white;
+      padding: 0 10px;
+    }
+  }
+
+  .row {
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+  }
+}
