@@ -16,6 +16,7 @@ body {
 
 p {
   margin: 0 0 1em;
+  text-align: justify;
 }
 
 h1 {
@@ -70,5 +71,10 @@ section {
     -webkit-columns: 2;
     -moz-columns: 2;
     columns: 2;
+
+    $gap: 2.5rem;
+    -webkit-column-gap: $gap;
+    -moz-column-gap: $gap;
+    column-gap: $gap;
   }
 }
